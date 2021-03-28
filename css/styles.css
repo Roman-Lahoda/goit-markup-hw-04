@@ -20,7 +20,14 @@ html {
   --color-btn: #212121;
   --border-example: #eeeeee;
   --border-header: #ececec;
-  --bgc-hero: hex(#e5e5e5);
+  --bgc-hero: #e5e5e5;
+  --icon-color: #afb1b8;
+  --bgc-icon: #44454e;
+  --box-shadow-example: 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --box-shadow-btn: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --bgc-icon-box: #f5f4fa;
 }
 
 body {
@@ -80,8 +87,6 @@ header > .conteiner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 .logo {
   margin-right: 93px;
@@ -109,6 +114,8 @@ nav {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+  display: flex;
+  align-items: center;
 }
 .site-nav .link {
   color: var(--second-color-text);
@@ -167,7 +174,7 @@ header {
   text-transform: uppercase;
   color: var(--bg-color-text);
 
-  width: 696px;
+  width: 55%;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
@@ -230,17 +237,16 @@ header {
   overflow: hidden;
 }
 .icon-box {
-  background-color: #f5f4fa;
+  background-color: var(--bgc-icon-box);
   border-radius: 4px;
   margin-bottom: 30px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.advantages .icon {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 /* Чем занимаемся */
 .work .list {
   display: flex;
@@ -291,6 +297,8 @@ header {
 .team-card-text {
   padding-top: 30px;
   padding-bottom: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .team p {
   margin-bottom: 16px;
@@ -310,7 +318,7 @@ header {
   margin-right: 10px;
 }
 .social-links .icon {
-  fill: var(--main-color-text);
+  fill: var(--icon-color);
 }
 .social-links a:hover,
 .social-links a:focus {
@@ -327,7 +335,10 @@ header {
 }
 .our-clients .list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between;*/
+}
+.our-clients li:not(:first-child) {
+  margin-left: 30px;
 }
 .our-clients a {
   display: flex;
@@ -338,7 +349,7 @@ header {
   border: 1px solid rgba(175, 177, 184, 1);
 }
 .our-clients .icon {
-  fill: var(--main-color-text);
+  fill: var(--icon-color);
 }
 .our-clients a:hover,
 .our-clients a:focus {
@@ -377,8 +388,7 @@ header {
   color: var(--bg-color-text);
   background-color: var(--accent-color-text);
   cursor: pointer;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--box-shadow-btn);
 }
 .example {
   display: flex;
@@ -412,12 +422,11 @@ header {
 }
 
 .example a {
-  display: block;
+  display: inline-block;
 }
 .example a:hover,
 .example a:focus {
-  box-shadow: 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: var(--box-shadow-example);
 }
 
 /* footer */
@@ -428,6 +437,7 @@ header {
 }
 .dark-bg .conteiner {
   display: flex;
+  align-items: baseline;
 }
 .dark-bg .logo {
   color: var(--bg-color-text);
@@ -464,11 +474,10 @@ footer .social-links {
 }
 .our-social-link {
   margin-left: 67px;
-  padding-top: 15px;
 }
 .our-social-link .icon {
   fill: var(--bg-color-text);
 }
 .our-social-link a {
-  background-color: #44454e;
+  background-color: var(--bgc-icon);
 }
